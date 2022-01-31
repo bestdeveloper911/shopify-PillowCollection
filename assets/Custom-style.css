@@ -1,0 +1,12 @@
+.wrapper-header.wrapper_header_default .is-sticky .header-logo {
+	position: relative;
+	top: auto;
+	left: auto;
+	transform: translate(0%,0%);
+}
+.wrapper-header.wrapper_header_default .is-sticky .header-logo img {
+	height: auto !important;
+}
+.wrapper_header_default .is-sticky .wrapper-navigation .logo-fixed {
+    width: 190px ;
+}

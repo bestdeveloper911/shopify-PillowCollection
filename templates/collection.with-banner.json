@@ -1,0 +1,85 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-collection",
+      "settings": {
+        "limited_view": false,
+        "view_as_enable": true,
+        "sort_enable": true,
+        "collection_results_per_row": "4",
+        "collection_results_per_page": "24",
+        "color_button_more": "#ffffff",
+        "bg_color_button_more": "#ba7a2d",
+        "border_color_button_more": "#ba7a2d",
+        "show_countdown": false,
+        "text_countdown": "End ins:",
+        "show_pro_des": false,
+        "show_banner": false,
+        "show_banner_1": false,
+        "img_banner1": "shopify:\/\/shop_images\/james-hollingworth-uJKujfotMS8-unsplash.jpg",
+        "link_banner_1": "",
+        "show_banner_2": false,
+        "link_banner_2": "",
+        "show_banner_3": false,
+        "link_banner_3": "",
+        "show_banner_4": false,
+        "link_banner_4": "",
+        "pro_image": "&nbsp;",
+        "pro_name": "Product",
+        "pro_price": "Price",
+        "pro_quantity": "Qty",
+        "pro_variant_options": "Options",
+        "btn_1_bg_color": "#232323",
+        "btn_1_border_color": "#232323",
+        "btn_1_text_color": "#fff",
+        "btn_2_bg_color": "#fff",
+        "btn_2_border_color": "#323232",
+        "btn_2_text_color": "#232323",
+        "btn_3_bg_color": "#fff",
+        "btn_3_border_color": "#e6e6e6",
+        "btn_3_text_color": "#232323",
+        "btn_4_bg_color": "#69c69c",
+        "btn_4_border_color": "#69c69c",
+        "btn_4_text_color": "#fff"
+      }
+    },
+    "brand": {
+      "type": "brand-supermarket",
+      "disabled": true,
+      "settings": {
+        "background_color": "#f5f5f5",
+        "heading": "Top Brands",
+        "item_per_row": "3",
+        "enable_all": true,
+        "title_all": "View all",
+        "link": "",
+        "content": "",
+        "margin_bottom_mb": 0,
+        "margin_bottom_tab": 0,
+        "margin_bottom": 0
+      }
+    },
+    "testimonials": {
+      "type": "collection-testimonials",
+      "disabled": true,
+      "settings": {
+        "display_customer": false
+      }
+    },
+    "recently-view": {
+      "type": "recently-viewed-products",
+      "settings": {
+        "display_recently_viewed_products": true,
+        "recently_viewed_products_title": "Recently Viewed Products",
+        "number_of_recently_viewed_products": "8",
+        "recently_viewed_products_per_row": "5"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "brand",
+    "testimonials",
+    "recently-view"
+  ]
+}

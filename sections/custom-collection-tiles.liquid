@@ -1,0 +1,90 @@
+<div class="section_container">
+  <div class="main_content container">
+    <div class="collection-tile-wrapper d-flex">
+      <div class="tile-column">
+        {% assign collection = section.settings.collection %}
+        <a class="collection-tile-item" href="{{ collection.url }}">
+          {% assign collection_name = section.settings.collection_name | default: collection.title %}
+          {% assign collection_img = section.settings.image | default: collection.featured_image %}
+          {%- assign img_url = collection_img | img_url: 'original' -%}
+          <div class="image_wrapper">
+            <img data-srcset="{{ img_url }}" alt="{{ collection_img.alt | default: shop.name }}" class="lazyload" data-sizes="auto">
+          </div>
+          <label>{{ collection_name }}</label>
+        </a>
+      </div>
+      <div class="tile-column tiles d-flex">
+        {% for block in section.blocks %}
+          {% assign collection = block.settings.collection %}
+          <a class="collection-tile-item" href="{{ collection.url }}">
+            {% assign collection_name = block.settings.collection_name | default: collection.title %}
+            {% assign collection_img = block.settings.image | default: collection.featured_image %}
+            {%- assign img_url = collection_img | img_url: 'original' -%}
+            <div class="image_wrapper">
+              <img data-srcset="{{ img_url }}" alt="{{ collection_img.alt | default: shop.name }}" class="lazyload" data-sizes="auto">
+            </div>
+            <label>{{ collection_name }}</label>
+          </a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Collection Tile",
+  "class": "custom-collection-tile",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Main collection"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "collection_name",
+      "label": "Label"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Collection",
+      "type": "block",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "collection_name",
+          "label": "Label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection tile"
+    }
+  ]
+}
+{% endschema %}

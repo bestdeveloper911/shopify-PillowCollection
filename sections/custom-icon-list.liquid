@@ -1,0 +1,46 @@
+<div class="section_container">
+  <div class="main_content container">
+    <div class="icon-list d-flex">
+      {% for block in section.blocks %}
+        <div class="list-wrapper">
+          <div class="image_wrapper"><img data-src="{{ block.settings.image | img_url: '300x' }}" class="lazyload"></div>
+          <div class="list-title">{{ block.settings.title }}</div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+
+{% schema %}
+{
+  "name": "Icon list",
+  "tag": "section",
+  "class": "custom-icon-list",
+  "settings": [
+  ],
+  "blocks": [
+    {
+      "type": "block",
+      "name": "Block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Icon list"
+    }
+  ]
+}
+{% endschema %}
